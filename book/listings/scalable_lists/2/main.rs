@@ -21,7 +21,7 @@ fn main() {
 fn build_ui(app: &gtk::Application) {
     let window = gtk::ApplicationWindowBuilder::new()
         .default_width(600)
-        .default_height(600)
+        .default_height(300)
         .application(app)
         .title("ListView: Applications Launcher")
         .build();

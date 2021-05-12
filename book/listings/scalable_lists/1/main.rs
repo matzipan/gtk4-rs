@@ -22,6 +22,8 @@ fn build_ui(application: &Application) {
     let window = ApplicationWindowBuilder::new()
         .application(application)
         .title("My GTK App")
+        .default_width(600)
+        .default_height(300)
         .build();
 
     // ANCHOR: model
@@ -54,7 +56,7 @@ fn build_ui(application: &Application) {
             .property("number")
             .expect("The property needs to exist and be readable.")
             .get::<i32>()
-            .expect("The property needs to be of type `bool`.");
+            .expect("The property needs to be of type `i32`.");
 
         // Get `Label` from `ListItem`
         let label = list_item
