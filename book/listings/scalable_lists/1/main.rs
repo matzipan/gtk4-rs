@@ -49,7 +49,7 @@ fn build_ui(application: &Application) {
             .item()
             .expect("The item has to exist.")
             .downcast::<IntegerObject>()
-            .expect("The item has to be an `IntegerObject`");
+            .expect("The item has to be an `IntegerObject`.");
 
         // Get `i32` from `IntegerObject`
         let number = integer_object
@@ -63,7 +63,7 @@ fn build_ui(application: &Application) {
             .child()
             .expect("The child has to exist.")
             .downcast::<Label>()
-            .expect("The child has to be a `Label`");
+            .expect("The child has to be a `Label`.");
 
         // Setting "label" to "number"
         label.set_label(&number.to_string());
